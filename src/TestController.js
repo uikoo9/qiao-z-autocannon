@@ -8,6 +8,10 @@ module.exports = function (app) {
   });
 
   app.get('/res-render', function (req, res) {
-    res.render('./res-render.html', { name: 'test res.render' });
+    res.render('./res-render.html');
+  });
+
+  app.get('/res-render-template', function (req, res) {
+    res.render('./res-render-template.html', { name: 'test res.render with template' });
   });
 };
