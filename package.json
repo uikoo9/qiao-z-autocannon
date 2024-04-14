@@ -1,7 +1,9 @@
 {
   "name": "qiao-z-autocannon",
   "private": true,
-  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
   "author": "uikoo9 <uikoo9@qq.com>",
   "scripts": {
     "prepare": "husky",
@@ -10,21 +12,17 @@
     "lint": "npm run prettier && npm run eslint",
     "postinstall": "npm run lint",
     "cz": "qpro commitizen",
-    "update": "qpro ncu u",
-    "qz": "cd src && node qz.js",
-    "express": "cd src && node express.js"
-  },
-  "dependencies": {
-    "art-template": "^4.13.2",
-    "express": "^4.19.2",
-    "express-art-template": "^1.0.1",
-    "qiao-z": "^3.8.0"
+    "update": "qpro ncu u && lerna exec 'qpro ncu u' --concurrency=1",
+    "qz": "npm run start -w qz-demo",
+    "express": "npm run start -w express-demo"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.2.1",
-    "@commitlint/config-conventional": "^19.1.0",
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
     "husky": "^9.0.11",
+    "lerna": "^8.1.2",
     "lint-staged": "^15.2.2",
+    "nx": "^18.2.4",
     "qiao-project": "^4.5.2"
   }
 }

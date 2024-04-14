@@ -1,0 +1,10 @@
+{
+  "name": "qz-demo",
+  "private": true,
+  "scripts": {
+    "start": "node qz.js"
+  },
+  "dependencies": {
+    "qiao-z": "^4.5.2"
+  }
+}
