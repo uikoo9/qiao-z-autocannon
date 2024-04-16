@@ -9,7 +9,8 @@ const qz = require('qiao-z');
   const app = await qz();
 
   // listen
-  app.listen(9999);
+  const port = process.argv[2] || 9999;
+  app.listen(port);
 
-  console.log('start qz success');
+  console.log(`start qz success, on ${port}`);
 })();
