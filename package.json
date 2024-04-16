@@ -12,6 +12,7 @@
     "lint": "npm run prettier && npm run eslint",
     "postinstall": "npm run lint",
     "cz": "qpro commitizen",
+    "pb": "lerna publish",
     "update": "qpro ncu u && lerna exec 'qpro ncu u' --concurrency=1",
     "qz": "npm run start -w qz-demo",
     "express": "npm run start -w express-demo"
