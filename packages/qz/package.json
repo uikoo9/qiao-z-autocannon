@@ -5,6 +5,6 @@
     "start": "node qz.js"
   },
   "dependencies": {
-    "qiao-z": "^5.1.2"
+    "qiao-z": "^5.1.3"
   }
 }
